@@ -1,0 +1,36 @@
+﻿.fc-toolbar-chunk {
+    display: flex;
+}
+
+.fc .fc-button-primary{
+    background-color: #fbc600;
+    border-color: black;
+    color: black;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #d1a915;
+    border-color: black;
+    color: black;
+}
+
+.fc .fc-button-primary:not(:disabled):active {
+    background-color: #d1a915;
+    border-color: black;
+    color: black;
+}
+
+.fc .fc-button-primary:disabled {
+    background-color: #d9cc9e;
+    border-color: black;
+    color: black;
+}
+
+.fc th {
+    background-color: #fbc600;
+}
+
+.fc .fc-day-disabled {
+    background: gray;
+
+}

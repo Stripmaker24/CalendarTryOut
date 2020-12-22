@@ -1,0 +1,83 @@
+﻿<link rel="stylesheet" href="~/lib/fullCalender/main.css">
+<link rel="stylesheet" href="~/css/Custom.css">
+<div id="calendar"></div>
+<div class="modal fade" id="pop-up-cud" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Beschikbaarheidspanel</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="form-cud">
+                    <div class="d-flex flex-column">
+                        <input type="hidden" id="eventId" value="0">
+                        <Label for="eventSubject"> Reden: </Label>
+                        <select id="eventSubject">
+                            <option id="school" value="school">School</option>
+                            <option id="verlof" value="verlof">Verlof</option>
+                            <option id="overig" value="overig">overig</option>
+                        </select>
+                        <label for="start-time">Start-tijd:</label>
+                        <input type="datetime-local" id="start-time">
+                        <label for="end-time">Eind-tijd:</label>
+                        <input type="datetime-local" id="end-time">
+                        <div>
+                            <label for="is-full-day">Hele dag:</label>
+                            <input type="checkbox" id="is-full-day">
+                        </div>
+                        <div id="RL"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer" id="button-field-cud">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+                <button type="button" id="save-btn-cud" class="btn btn-success">Opslaan</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="pop-up-perm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Beschikbaarheid vastzetten</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="d-flex flex-column">
+                        <div>
+                            <label for="school-check">Ik wil school vast zetten:</label>
+                            <input type="checkbox" id="school-check" value="school">
+                        </div>
+                        <div>
+                            <label for="verlof-check">Ik wil verlof vast zetten:</label>
+                            <input type="checkbox" id="verlof-check" value="verlof">
+                        </div>
+                        <div>
+                            <label for="overig-check">Ik wil overig vast zetten:</label>
+                            <input type="checkbox" id="overig-check" value="overig">
+                        </div>
+                        <label for="week-count">Ik wil dit vast zetten voor zoveel weken:</label>
+                        <input type="number" id="week-count" name="weeks">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer" id="button-field-perm">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+                <button type="button" id="save-btn-perm" class="btn btn-success">Opslaan</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script scr="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/fullCalender/main.js"></script>
+    <script scr="~/lib/fullCalender/locales/nl.js"></script>
+    <script src="~/js/Calendar.js"></script>
+}
